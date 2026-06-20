@@ -1,13 +1,12 @@
 import type { MetadataRoute } from "next";
 import { getAllWriteups } from "@/lib/mdx";
-
-const BASE_URL = "https://praiseabougbede.com"; // TODO: update to real production URL
+import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllWriteups();
 
   const writeupUrls = posts.map((post) => ({
-    url: `${BASE_URL}/writeups/${post.slug}`,
+    url: `${siteUrl}/writeups/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
@@ -15,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: BASE_URL,
+      url: siteUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${BASE_URL}/writeups`,
+      url: `${siteUrl}/writeups`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -18,9 +19,6 @@ const geistMono = localFont({
   display: "swap",
   weight: "100 900",
 });
-
-// TODO: replace with real email and LinkedIn URL before going live
-const siteUrl = "https://praiseabougbede.com"; // TODO: update to real production URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
