@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* Expose CSS custom-property tokens as Tailwind utilities */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-canvas:  var(--canvas);
+  --color-surface: var(--surface);
+  --color-edge:    var(--edge);
+  --color-ink:     var(--ink);
+  --color-muted:   var(--muted);
+  --color-accent:  var(--accent);
+  --color-accent-dim: var(--accent-dim);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Light theme ──────────────────────────────── */
+:root {
+  --canvas:      #FFFFFF;
+  --surface:     #F8FAFC;
+  --edge:        #E2E8F0;
+  --ink:         #0F172A;
+  --muted:       #64748B;
+  --accent:      #2563EB;
+  --accent-dim:  #1D4ED8;
+}
+
+/* ── Dark theme (primary) ─────────────────────── */
+.dark {
+  --canvas:      #0B0E14;
+  --surface:     #111827;
+  --edge:        #1F2937;
+  --ink:         #F1F5F9;
+  --muted:       #94A3B8;
+  --accent:      #3B82F6;
+  --accent-dim:  #60A5FA;
+}
+
+/* ── Base styles ──────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.dark { color-scheme: dark; }
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── Focus ring (accessible) ──────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Reveal animation ─────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Reduced motion ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Prose (MDX write-ups) ────────────────────── */
+.prose {
+  max-width: 68ch;
+  line-height: 1.75;
 }
+.prose h1, .prose h2, .prose h3, .prose h4 { color: var(--ink); font-weight: 700; }
+.prose h1 { font-size: 2rem; margin-bottom: 1rem; }
+.prose h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+.prose h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+.prose p  { margin: 1rem 0; color: var(--ink); }
+.prose a  { color: var(--accent); text-decoration: underline; }
+.prose a:hover { color: var(--accent-dim); }
+.prose ul, .prose ol { padding-left: 1.5rem; margin: 0.75rem 0; }
+.prose li { margin: 0.25rem 0; }
+.prose code { font-family: var(--font-geist-mono, monospace); font-size: 0.875em; background: var(--surface); color: var(--accent); padding: 0.1em 0.35em; border-radius: 4px; }
+.prose pre { background: var(--surface); border: 1px solid var(--edge); border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin: 1.5rem 0; }
+.prose pre code { background: none; padding: 0; color: var(--ink); }
+.prose blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); margin: 1.5rem 0; }
+.prose hr { border-color: var(--edge); margin: 2rem 0; }
