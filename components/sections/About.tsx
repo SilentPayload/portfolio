@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -28,19 +29,15 @@ export function About() {
             </ul>
           </Reveal>
 
-          {/* Headshot placeholder — TODO: add real photo */}
           <Reveal delay={160} className="hidden md:block">
-            <div
-              className="w-48 h-48 rounded-xl border-2 border-dashed border-edge bg-surface flex items-center justify-center text-center text-xs text-muted font-mono"
-              aria-label="Headshot placeholder — replace with real photo"
-            >
-              {/* TODO: Replace with <Image src="/headshot.jpg" ... /> */}
-              <span>
-                TODO
-                <br />
-                headshot
-              </span>
-            </div>
+            <Image
+              src="/headshot.png"
+              alt="Praise Abu Ugbede"
+              width={192}
+              height={192}
+              className="w-48 h-48 rounded-xl object-cover object-top"
+              priority
+            />
           </Reveal>
         </div>
       </div>

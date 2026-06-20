@@ -7,7 +7,7 @@ export const certifications: Certification[] = [
     status: "in-progress",
   },
   {
-    name: "Microsoft AZ-500 — Azure Security Engineer Associate",
+    name: "Microsoft AZ-500: Azure Security Engineer Associate",
     issuer: "Microsoft",
     status: "in-progress",
     note: "Voucher awarded via hackathon",
@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
     date: "2026",
   },
   {
-    name: "TryHackMe — Privilege Escalation",
+    name: "TryHackMe: Privilege Escalation",
     issuer: "TryHackMe",
     status: "in-progress",
   },

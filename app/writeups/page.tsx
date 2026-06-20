@@ -28,7 +28,7 @@ export default function WriteupsPage() {
       {posts.length === 0 ? (
         <div className="rounded-xl border border-dashed border-edge bg-surface px-6 py-14 text-center">
           <p className="font-mono text-sm text-muted">
-            // No published posts yet — check back soon.
+            No published posts yet, check back soon.
           </p>
         </div>
       ) : (

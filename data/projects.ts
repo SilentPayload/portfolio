@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description:
       "Built with Team Ruthless at the ABC / Microsoft / TeKnowledge Cybersecurity Hackathon 2026. Automates SOC incident triage and response, reducing analyst workload on repetitive alert handling.",
     tags: ["SOC", "AI / ML", "Incident Response", "Hackathon"],
-    badge: "Silver Medal — Hackathon Finalist",
+    badge: "Silver Medal · Hackathon Finalist",
   },
   {
     name: "FirstBank SOC Training Lab",

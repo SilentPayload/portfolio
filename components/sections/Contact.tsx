@@ -5,7 +5,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 const links = [
   {
     label: "Email",
-    // TODO: replace profile.links.email with real address
     href: `mailto:${profile.links.email}`,
     display: profile.links.email,
     icon: (
@@ -42,9 +41,8 @@ const links = [
   },
   {
     label: "LinkedIn",
-    // TODO: replace with real LinkedIn URL in data/profile.ts
     href: profile.links.linkedin,
-    display: "linkedin.com/in/TODO",
+    display: "linkedin.com/in/abu-praise",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -66,8 +64,8 @@ export function Contact() {
             Get in touch
           </h2>
           <p className="text-muted text-base mb-12 max-w-lg leading-relaxed">
-            Open to opportunities in penetration testing, SOC roles, and security education —
-            primarily UK-based and remote. Reach out via email or any of the links below.
+            Open to opportunities in penetration testing, SOC roles, and security education,
+            primarily UK-based and remote. Feel free to reach out via email or any of the links below.
           </p>
         </Reveal>
 

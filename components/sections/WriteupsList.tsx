@@ -29,7 +29,7 @@ export function WriteupsList() {
           <Reveal delay={80}>
             <div className="rounded-xl border border-dashed border-edge bg-surface px-6 py-10 text-center">
               <p className="text-muted text-sm font-mono">
-                // Write-ups coming soon — check back later.
+                Write-ups coming soon, check back later.
               </p>
             </div>
           </Reveal>

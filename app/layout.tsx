@@ -25,11 +25,11 @@ const siteUrl = "https://praiseabougbede.com"; // TODO: update to real productio
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Praise Abu Ugbede — Cybersecurity Analyst & Penetration Tester",
+    default: "Praise Abu Ugbede | Cybersecurity Analyst & Penetration Tester",
     template: "%s | Praise Abu Ugbede",
   },
   description:
-    "Cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria — open to UK relocation. Hands-on experience in SOC operations, web app security, and building security training labs.",
+    "Cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria, open to UK relocation. Hands-on experience in SOC operations, web app security, and building security training labs.",
   keywords: [
     "cybersecurity",
     "penetration testing",
@@ -47,21 +47,21 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteUrl,
     siteName: "Praise Abu Ugbede",
-    title: "Praise Abu Ugbede — Cybersecurity Analyst & Penetration Tester",
+    title: "Praise Abu Ugbede | Cybersecurity Analyst & Penetration Tester",
     description:
-      "Cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria — open to UK relocation.",
+      "Cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria, open to UK relocation.",
     images: [
       {
         url: "/og-image.png", // TODO: create a real OG image at 1200x630
         width: 1200,
         height: 630,
-        alt: "Praise Abu Ugbede — Cybersecurity Portfolio",
+        alt: "Praise Abu Ugbede Cybersecurity Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Praise Abu Ugbede — Cybersecurity Analyst & Penetration Tester",
+    title: "Praise Abu Ugbede | Cybersecurity Analyst & Penetration Tester",
     description:
       "Cybersecurity analyst, penetration tester, and security educator.",
     images: ["/og-image.png"],

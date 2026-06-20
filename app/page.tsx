@@ -9,9 +9,9 @@ import { Certifications } from "@/components/sections/Certifications";
 import { Contact } from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
-  title: "Praise Abu Ugbede — Cybersecurity Analyst & Penetration Tester",
+  title: "Praise Abu Ugbede | Cybersecurity Analyst & Penetration Tester",
   description:
-    "Portfolio of Praise Abu Ugbede: cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria — open to UK relocation.",
+    "Portfolio of Praise Abu Ugbede: cybersecurity analyst, penetration tester, and security educator based in Abuja, Nigeria, open to UK relocation.",
 };
 
 export default function HomePage() {

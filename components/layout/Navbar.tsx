@@ -26,7 +26,7 @@ export function Navbar() {
         <Link
           href="/"
           className="font-mono text-sm font-semibold text-ink hover:text-accent transition-colors"
-          aria-label="Praise Abu Ugbede — home"
+          aria-label="Praise Abu Ugbede, go to homepage"
         >
           <span className="text-accent">~/</span>praise
         </Link>
