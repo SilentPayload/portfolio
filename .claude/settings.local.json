@@ -12,7 +12,11 @@
       "Bash(cp -f /home/silentpayload/portfolio/favicon-mono.svg /home/silentpayload/portfolio/public/favicon-mono.svg)",
       "Bash(cp -f /home/silentpayload/portfolio/og-image.png /home/silentpayload/portfolio/public/og-image.png)",
       "Bash(cp -f \"/home/silentpayload/portfolio/CV\\(1\\).docx\" /home/silentpayload/portfolio/public/cv.docx)",
-      "Bash(yes)"
+      "Bash(yes)",
+      "Bash(git filter-branch *)",
+      "Bash(git stash *)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter 'grep -v \"Co-Authored-By:\"' -- --all)",
+      "Bash(git commit *)"
     ]
   }
 }
