@@ -7,7 +7,12 @@
       "Bash(npm run *)",
       "Bash(npm list *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(cp -f /home/silentpayload/portfolio/favicon.svg /home/silentpayload/portfolio/public/favicon.svg)",
+      "Bash(cp -f /home/silentpayload/portfolio/favicon-mono.svg /home/silentpayload/portfolio/public/favicon-mono.svg)",
+      "Bash(cp -f /home/silentpayload/portfolio/og-image.png /home/silentpayload/portfolio/public/og-image.png)",
+      "Bash(cp -f \"/home/silentpayload/portfolio/CV\\(1\\).docx\" /home/silentpayload/portfolio/public/cv.docx)",
+      "Bash(yes)"
     ]
   }
 }

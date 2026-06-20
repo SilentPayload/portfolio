@@ -74,10 +74,10 @@ export function Hero() {
             View Work
           </Link>
           <a
-            href="/cv.pdf"
+            href="/cv.docx"
             download
             className="rounded-md border border-edge px-5 py-2.5 text-sm font-medium text-ink hover:border-accent hover:text-accent transition-colors"
-            aria-label="Download CV (PDF)"
+            aria-label="Download CV"
           >
             Download CV
           </a>

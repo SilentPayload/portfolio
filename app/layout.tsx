@@ -86,8 +86,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon alternate" href="/favicon-mono.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
       </head>
       <body className="bg-canvas text-ink min-h-screen flex flex-col">
         {/* Runs synchronously before paint to prevent theme flash */}
